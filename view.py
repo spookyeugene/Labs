@@ -7,7 +7,7 @@ def main_page():
 
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    return render_template('posts/index.html')
 
 @app.route('/registration')
 def reg():

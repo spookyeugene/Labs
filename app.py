@@ -1,11 +1,10 @@
 from flask import Flask
 from config import Configuration
 from flask_sqlalchemy import SQLAlchemy
-from posts.blueprint import posts
+
 
 app=Flask(__name__)
 app.config.from_object(Configuration)
-app.register_blueprint(posts, url_pefix='/blog')
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
